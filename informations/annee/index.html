@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Informations par année</title>
+	<link rel="stylesheet" href="../informations.css?v=1.1">
+	<link rel="stylesheet" href="../../styles/navbar.css?v=1.1">
+	<link rel="stylesheet" href="../../styles/liste.css?v=1.1">
+	<link rel="icon" href="../../main/tdf.png">
+	<script src="annee.js"></script>
+</head>
+<body onload="init()">
+	<ul id="navbar">
+		<li><a href="../../">Coureurs</a></li>
+		<li><a href="">Infos par année</a></li>
+		<li><a href="../generales/">Infos générales</a></li>
+		<li><a href="../../statistiques/">Statistiques globales</a></li>
+	</ul>
+	<div class="mainDiv">
+		<div class="rechercheAnnee">
+			<select name="annee" id="anneeInput" class="annee" onchange="rechercheAnnee();"></select>
+			<select name="info" id="menuInfos" onchange="rechercheAnnee();">
+				<option value="classement" selected>Classement</option>
+				<option value="etapes">Etapes</option>
+				<option value="participants">Participants</option>
+				<option value="abandons">Abandons</option>
+				<option value="statistiques">Statistiques</option>
+			</select>
+		</div>
+		
+		<div id="resultats">
+			<div class="chargement">
+				Chargement...
+			</div>
+		</div>
+	</div>
+</body>
+</html>

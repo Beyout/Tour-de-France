@@ -1,0 +1,29 @@
+#navbar {
+	display: block;
+	background-color: #19191a;
+	margin-top: 0;
+	padding-left: 1.5em;
+	border-bottom: solid 2px #e2e25a;
+}
+
+#navbar li {
+	display: inline-block;
+}
+
+#navbar a {
+	display: inline-block;
+	padding: 0.7em 0.7em;
+	color: #fafafa;
+	text-decoration: none;
+	font-size: 1.75em;
+	font-family: 'Rubik', sans-serif;
+	transition: 0.2s;
+}
+
+#navbar a:hover {
+	background-color: #31312f;
+}
+
+#recherche {
+	display: block;
+}

@@ -1,0 +1,80 @@
+.tabList {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.tabList th {
+	border-right:solid 2px #d2d42b;
+	background-color: #2b2e2e;
+	font-family: 'Rubik', sans-serif;
+	font-size: 1.1em;
+	cursor: pointer;
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+.tabList th:hover {
+	background-color: #303333;
+}
+
+.tabList th:last-child {
+	border-right: none;
+}
+
+.tabList th span {
+	display: block;
+	margin: 0px 5px;
+	padding: 7px;
+	color: #f3f3ef;
+}
+
+.tabList td {
+	padding: 10px 6px;
+}
+
+.tabList tr {
+	border-bottom: solid 1px #4b4e50;
+	transition: transform 200ms;
+}
+
+.tabList tr:not(:first-child):hover {
+	background-color: #434647;
+	transform: scale(1.02);
+}
+
+.tabList th i {
+	margin-left: 0.5em;
+	font-size: 1em;
+	color: transparent;
+}
+
+.activeSortIcon {
+	color: #e8eb4f !important;
+}
+
+.tabList td i {
+	font-size: 2em;
+	color: #fbff10;
+}
+
+.tabList button {
+	padding: 5px 7px;
+	background-color: Transparent;
+    background-repeat: no-repeat;
+	border:  none;
+	border-radius: 7px;
+    cursor: pointer;
+    overflow:  hidden;
+    outline: none;
+}
+
+.tabList button:hover {
+	background-color: rgba(138, 138, 138, 0.158);
+}
+
+.tabList button:active {
+	background-color: rgba(155, 155, 155, 0.205);
+}

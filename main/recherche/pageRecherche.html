@@ -1,0 +1,45 @@
+<body onload="init()">
+	<ul id="navbar">
+		<li><a href="">Coureurs</a></li>
+		<li><a href="informations/annee">Infos par année</a></li>
+		<li><a href="informations/generales">Infos générales</a></li>
+		<li><a href="../../statistiques/">Statistiques globales</a></li>
+	</ul>
+	<div class="mainDiv">
+		<div id="recherche">
+			<div id="formRecherche">
+				<input type="text" id="nom" name="nom" size="50" maxlength="60" value="" placeholder="Recherche coureur">
+				<div id="ajoutButt" onclick="toggleAjout()">Ajouter +</div>
+			</div>
+			<div id="ajout">
+				<div id="suppression"></div>
+				<div id="modification" class="popupForm"></div>
+				<div id="formAjout" name="form_ajout" class="popupForm">
+					<div class="rel">
+						<h2>Ajout coureur</h2>
+						<label for="addNom">Nom</label>
+						<input type="text" name="cou_nom" id="addNom" required>
+						<label for="addPrenom">Prénom</label>
+						<input type="text" name="cou_prenom" id="addPrenom" required>
+						<label for="add_annee_naissance">Année de naissance</label>
+						<input type="text" name="cou_annee_naissance" id="add_annee_naissance" minlength="4" maxlength="4" size="4" class="annee" onkeyup="fillAnneeDebut()">
+						<label for="add_annee_prem">Année de première participation</label>
+						<input type="text" name="cou_annee_prem" id="add_annee_prem" minlength="4" maxlength="4" size="4" class="annee" value="<?php echo GetDernièreAnnéeTour($conn); ?>">
+						<label for="addPays">Pays</label>
+						<?php InsertionMenuDeroulantPays($conn); ?>
+						<label for="add_annee_debut">Année de début de nationalité</label>
+						<input type="text" name="cou_annee_debut" id="add_annee_debut" maxlength="4" size="4">
+						<div class="centerFlex">
+							<div class="popupConfirm" onclick="addCoureur()">Ajouter</div>
+						</div>
+						<div id="resultatAjout"></div>
+						<div class="fermeButt" onclick="montrerAjout(false)">X</div>
+					</div>
+				</div>
+			</div>
+			<div id="popupMessage"></div>
+			<div id="infosCoureur" class="popupForm"></div>
+		</div>
+		<div id="resultat"></div>
+	</div>
+</body>

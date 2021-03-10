@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Informations Générales</title>
+	<link rel="stylesheet" href="../informations.css?v=1.1">
+	<link rel="stylesheet" href="../../styles/navbar.css?v=1.1">
+	<link rel="stylesheet" href="../../styles/liste.css?v=1.1">
+	<link rel="stylesheet" href="../informations.css?v=1.1">
+	<link rel="icon" href="../../main/tdf.png">
+	<script src="generales.js"></script>
+</head>
+<body onload="init()">
+	<ul id="navbar">
+		<li><a href="../../">Coureurs</a></li>
+		<li><a href="../annee/">Infos par année</a></li>
+		<li><a href="">Infos générales</a></li>
+		<li><a href="../../statistiques/">Statistiques globales</a></li>
+	</ul>
+	<div class="mainDiv">
+		<div class="rechercheAnnee">
+			<select name="info" id="menuInfos" onchange="recherche();">
+				<option value="pays" selected>Pays visités</option>
+				<option value="villes">Villes étapes</option>
+				<option value="pays_participants">Nations participantes</option>
+			</select>
+		</div>
+
+		<div id="formRecherche">
+			<input type="text" id="nom" name="nom" size="60" maxlength="60" value="" placeholder="Recherche ville">
+		</div>
+		
+		<div id="resultats">
+			<div class="chargement">
+				Chargement...
+			</div>
+		</div>
+	</div>
+</body>
+</html>
